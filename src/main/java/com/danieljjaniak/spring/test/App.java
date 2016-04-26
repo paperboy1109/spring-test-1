@@ -1,8 +1,9 @@
 package com.danieljjaniak.spring.test;
 
 import org.springframework.context.ApplicationContext;
+
+//import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class App {
 	
@@ -20,6 +21,12 @@ public class App {
 		Person person = (Person)context.getBean("person");
 		person.speak();
 		
+		Address address = (Address)context.getBean("address");
+		System.out.println(address);
+		
+		System.out.print(person);
+		
+
 		//ApplicationContext does not have a close method
 		//FileSystemXmlApplicationContext DOES have a close method 
 		// Cast context to FileSystemXmlApplicationContext
