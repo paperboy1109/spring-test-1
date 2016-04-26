@@ -18,13 +18,17 @@ public class App {
 		//Person person = new Person();
 		//person.speak();
 		
-		Person person = (Person)context.getBean("person");
-		person.speak();
+		Person person1 = (Person)context.getBean("person");
+		person1.setTaxId(321);
+		person1.speak();
+		Person person2 = (Person)context.getBean("person");
+
 		
 		Address address = (Address)context.getBean("address");
 		System.out.println(address);
 		
-		System.out.print(person);
+		System.out.print(person1);
+		System.out.print(person2);
 		
 
 		//ApplicationContext does not have a close method
